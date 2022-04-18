@@ -551,7 +551,7 @@ local Success, Error = pcall(function()
 local Framework = loadstring(game:HttpGet("https://uwuware.sashley.wtf/load/library/framework", true))()
 local ESPFramework = loadstring(game:HttpGet("https://uwuware.sashley.wtf/load/library/esp", true))()
     local Watermark                = Framework:CreateWatermark("VapeLite | {game} | {fps}")
-    local UwUWare                  = Framework:CreateWindow( "VapeLite", Vector2.new(492, 588), Enum.KeyCode.LeftAlt )
+    local UwUWare                  = Framework:CreateWindow( "VapeLite", Vector2.new(492, 588), Enum.KeyCode.RightAlt )
 
     local General                  = UwUWare:CreateTab("General")
     local Visuals                  = UwUWare:CreateTab("Visuals")
@@ -1156,7 +1156,7 @@ local ESPFramework = loadstring(game:HttpGet("https://uwuware.sashley.wtf/load/l
                 Settings.CamFovToggled = V
             end, "FOVToggle")
 
-            FOVToggle:AddKeybind(Enum.KeyCode.RightAlt, "FOVToggle")
+            FOVToggle:AddKeybind(Enum.KeyCode.Unknown, "FOVToggle")
 
             PlayerS:AddSlider("Field Of View", 70, Settings.CamFov, 120, 10, function(V)
                 Settings.CamFov = V
@@ -1277,6 +1277,8 @@ local ESPFramework = loadstring(game:HttpGet("https://uwuware.sashley.wtf/load/l
             local SilentToggle = SilentAimS:AddToggle("Enabled", false, function(V)
                 SilentSettings.Main.Enabled = V
             end)
+
+            SilentToggle:AddKeybind(Enum.KeyCode.Unknown, "SilentToggle")
 
             SilentAimS:AddToggle("Visible Check", false, function(V)
                 SilentSettings.Main.VisibleCheck = V
