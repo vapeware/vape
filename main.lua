@@ -548,8 +548,8 @@ local Success, Error = pcall(function()
 
     -- #region // Objects
 
-local Framework = loadstring(game:HttpGet("https://uwuware.sashley.wtf/load/library/framework", true))()
-local ESPFramework = loadstring(game:HttpGet("https://uwuware.sashley.wtf/load/library/esp", true))()
+local Framework = loadstring(game:HttpGet("https://raw.githubusercontent.com/vapeware/vape/main/framework", true))()
+local ESPFramework = loadstring(game:HttpGet("https://raw.githubusercontent.com/vapeware/vape/main/esp", true))()
     local Watermark                = Framework:CreateWatermark("VapeLite | {game} | {fps}")
     local UwUWare                  = Framework:CreateWindow( "VapeLite", Vector2.new(492, 588), Enum.KeyCode.RightAlt )
 
@@ -1155,8 +1155,6 @@ local ESPFramework = loadstring(game:HttpGet("https://uwuware.sashley.wtf/load/l
             local FOVToggle = PlayerS:AddToggle("Toggle FOV", Settings.CamFovToggled, function(V)
                 Settings.CamFovToggled = V
             end, "FOVToggle")
-
-            FOVToggle:AddKeybind(Enum.KeyCode.Unknown, "FOVToggle")
 
             PlayerS:AddSlider("Field Of View", 70, Settings.CamFov, 120, 10, function(V)
                 Settings.CamFov = V
