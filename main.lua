@@ -1516,8 +1516,7 @@ local ESPFramework = loadstring(game:HttpGet("https://uwuware.sashley.wtf/load/l
 
             -- #region // Credits Sector
             CreditsS:AddSeperator("Creators")
-            CreditsS:AddLabel("NilBoolean - Founder")
-            CreditsS:AddLabel("hdev - furry & webmaster")
+            CreditsS:AddLabel("Vapor - Lead Dev")
     
             -- #endregion
 
