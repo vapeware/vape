@@ -551,12 +551,12 @@ local Success, Error = pcall(function()
 local Framework = loadstring(game:HttpGet("https://raw.githubusercontent.com/vapeware/vape/main/framework", true))()
 local ESPFramework = loadstring(game:HttpGet("https://raw.githubusercontent.com/vapeware/vape/main/esp", true))()
     local Watermark                = Framework:CreateWatermark("VapeLite | {game} | {fps}")
-    local UwUWare                  = Framework:CreateWindow( "VapeLite", Vector2.new(492, 588), Enum.KeyCode.RightAlt )
+    local VapeLite                  = Framework:CreateWindow( "VapeLite", Vector2.new(492, 588), Enum.KeyCode.RightAlt )
 
-    local General                  = UwUWare:CreateTab("General")
-    local Visuals                  = UwUWare:CreateTab("Visuals")
-    local TeleportsS               = UwUWare:CreateTab("Teleports")
-    local Credits                  = UwUWare:CreateTab("Credits")
+    local General                  = VapeLite:CreateTab("General")
+    local Visuals                  = VapeLite:CreateTab("Visuals")
+    local TeleportsS               = VapeLite:CreateTab("Teleports")
+    local Credits                  = VapeLite:CreateTab("Credits")
     
     local MainS                    = General:CreateSector("Main", "left")
     local PepperS                  = General:CreateSector("Pepper", "right")   
@@ -1756,22 +1756,8 @@ end)
 
 if not Success and Error then
     pcall(function()
-        local ExecutorUsing            = is_sirhurt_closure and "Sirhurt" or pebc_execute and "ProtoSmasher" or syn and "Synapse X" or secure_load and "Sentinel" or KRNL_LOADED and "Krnl" or SONA_LOADED and "Sona" or "WTF?"
-        local HttpService              = game:GetService("HttpService")
-        
-        local RandomTag                = string.sub(HttpService:GenerateGUID(false), 1, 8)
-        local Data                     = { ["content"]=null,["embeds"]={{["title"]="VapeLite - Error Reporter",["description"]="An error has been found while execution.",["color"]=tonumber(0x287cd8),["fields"]={{["name"]="Support Code",["value"]=RandomTag,["inline"]=true},{["name"]="Game",["value"]="https://www.roblox.com/games/"..game.PlaceId,["inline"]=true},{["name"]="Executor",["value"]=ExecutorUsing,["inline"]=true},{["name"]="Error",["value"]="```"..Error.."```"}},["footer"]={["text"]="VapeLite | <date> | <time> | (Aurora Hub)",["icon_url"]="https://www.roblox.com/Thumbs/Avatar.ashx?x=100&y=100&Format=Png&username="..game.Players.LocalPlayer.Name}}}}
 
-        local Headers                  = {["Content-Type"]="application/json"}
-        local Encoded                  = HttpService:JSONEncode(Data)
-
-        Request                        = http_request or request or HttpPost or syn.request
-        local Final = {Url             = "https://websec.services/ws/send/rsxJ4CNdgcNM8cELtt8TWVqsuIxzHeR5OsNYkgpa", Body = Encoded, Method = "POST", Headers = Headers}
-
-        Request(Final)
-    
-        local MSGBox = messagebox("Unfortunately, VapeLite has detected an error. \n\nThis error has been sent to our servers.\nFor security reasons your game client will be closed.\n\nIf you need help fixing, A random generated Support tag ("..RandomTag..") has been copied, go in report bug and paste it in there and we will help you shortly.", "System", 0)
-        setclipboard(RandomTag)
+        local MSGBox = messagebox("Unfortunately, VapeLite has detected an error.", "Vape Software", 0)
 
         if MSGBox == 1 then
             game:Shutdown()
