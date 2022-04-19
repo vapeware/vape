@@ -551,7 +551,7 @@ local Success, Error = pcall(function()
 local Framework = loadstring(game:HttpGet("https://raw.githubusercontent.com/vapeware/vape/main/framework", true))()
 local ESPFramework = loadstring(game:HttpGet("https://raw.githubusercontent.com/vapeware/vape/main/esp", true))()
     local Watermark                = Framework:CreateWatermark("VapeLite | {game} | {fps}")
-    local VapeLite                  = Framework:CreateWindow( "VapeLite", Vector2.new(492, 588), Enum.KeyCode.RightAlt )
+    local VapeLite                  = Framework:CreateWindow( "VapeLite", Vector2.new(492, 588), Enum.KeyCode.RightShift )
 
     local General                  = VapeLite:CreateTab("General")
     local Visuals                  = VapeLite:CreateTab("Visuals")
